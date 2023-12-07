@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const input = readFileSync(join(__dirname, 'input.txt')).toString()
 
 // Separate different sections by "<text>:"
-const sections = input.split(/[A-Za-z\s]+:/).filter((part) => part.length)
+const sections = input.split(/[A-Za-z\s-]+:/).filter((part) => part.length)
 
 // Extract seed IDs
 const seeds = sections[0]
